@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Even or Odd Checker{% endblock %}
+
+{% block content %}
+    <h2>Enter a number to check if it is even or odd:</h2>
+    <form method="post">
+        <input type="text" name="number" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <p><strong>Result:</strong> {{ result }}</p>
+    {% else %}
+        <p>Enter a number and click check.</p>
+    {% endif %}
+{% endblock %}
